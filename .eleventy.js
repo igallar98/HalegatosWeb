@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: false
+  });
   eleventyConfig.addPassthroughCopy("assets");
   return {
     dir: {
