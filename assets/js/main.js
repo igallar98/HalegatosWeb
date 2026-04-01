@@ -13,11 +13,14 @@ const navJoinBtn = document.getElementById('nav-join-btn');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 
 // Set active link based on clean URLs
-const currentPath = window.location.pathname;
+let currentPath = window.location.pathname.replace(/\/$/, '').replace(/\.html$/, '');
+if (currentPath === '') currentPath = '/';
+
 navLinks.forEach(link => {
-  const linkPath = link.getAttribute('href');
-  // Match exact path or path with/without trailing slash
-  if (currentPath === linkPath || currentPath === linkPath + '/' || currentPath + '/' === linkPath) {
+  let linkPath = link.getAttribute('href').replace(/\/$/, '');
+  if (linkPath === '') linkPath = '/';
+  
+  if (currentPath === linkPath) {
     link.classList.add('active-link');
   }
 });
