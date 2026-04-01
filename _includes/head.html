@@ -1,0 +1,42 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="keywords" content="natación, madrid, lgtbi, club deportivo, saltos, aguas abiertas, inclusivo, master" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            'hale-blue': '#0084b7',
+            'hale-dark': '#002b42',
+            'hale-cyan': '#22aadd',
+            'hale-light': '#e0f2f7',
+            'hale-accent': '#ff6900',
+            'hale-surface': '#f8fafc',
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+            'glow': '0 0 20px rgba(34, 170, 221, 0.3)',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>

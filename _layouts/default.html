@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'es' }}">
+  {% include "head.html" %}
+  <body class="bg-hale-surface text-slate-800 font-sans antialiased selection:bg-hale-cyan selection:text-white flex flex-col min-h-screen">
+    
+    {% include "header.html" %}
+    
+    <main class="flex-grow">
+      {{ content }}
+    </main>
+
+    {% include "footer.html" %}
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

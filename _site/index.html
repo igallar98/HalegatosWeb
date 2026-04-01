@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | </title>
+  <meta name="description" content="Club Halegatos - Club Deportivo LGTBI+ Inclusivo en Madrid. Natación, aguas abiertas y saltos." />
+  <meta name="keywords" content="natación, madrid, lgtbi, club deportivo, saltos, aguas abiertas, inclusivo, master" />
+  <link rel="canonical" href="/" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            'hale-blue': '#0084b7',
+            'hale-dark': '#002b42',
+            'hale-cyan': '#22aadd',
+            'hale-light': '#e0f2f7',
+            'hale-accent': '#ff6900',
+            'hale-surface': '#f8fafc',
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+            'glow': '0 0 20px rgba(34, 170, 221, 0.3)',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+  <body class="bg-hale-surface text-slate-800 font-sans antialiased selection:bg-hale-cyan selection:text-white flex flex-col min-h-screen">
+    
+    <!-- Navbar -->
+<nav id="navbar" class="fixed z-50 transition-all duration-500 ease-in-out top-0 w-full bg-transparent py-6 px-4">
+  <div id="nav-container" class="flex justify-between items-center max-w-7xl mx-auto transition-all duration-500">
+    <!-- Logo -->
+    <a href="/" class="flex-shrink-0 flex items-center cursor-pointer group" aria-label="Inicio">
+      <img 
+        src="https://www.halegatos.com/wp-content/uploads/2021/09/Halegatos-club-deportivo-madrid_171.png"
+        alt="Club Halegatos Logo"
+        id="nav-logo"
+        class="h-10 w-auto transition-all duration-300 brightness-0 invert drop-shadow-lg"
+      />
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+      <a href="/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">Inicio</a>
+      <a href="/about/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">El Club</a>
+      <a href="/disciplines/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">Disciplinas</a>
+      <a href="/calendar/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">Calendario</a>
+      <a href="/gallery/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">Galería</a>
+      <a href="/news/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">Noticias</a>
+      <a href="/shop/" class="nav-link px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10">Tienda</a>
+      
+      <a href="/join/" id="nav-join-btn" class="ml-4 px-6 py-2.5 rounded-full font-bold text-sm shadow-lg transform hover:scale-105 transition-all duration-300 bg-white text-hale-blue hover:bg-gray-100">
+        Inscríbete
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-btn" aria-label="Abrir menú" class="focus:outline-none p-2 rounded-full transition-colors text-white hover:bg-white/10">
+        <i data-lucide="menu" id="menu-icon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-hale-dark/95 backdrop-blur-xl transition-all duration-500 md:hidden flex flex-col justify-center items-center space-y-6 opacity-0 pointer-events-none -translate-y-10">
+  <a href="/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">Inicio</a>
+  <a href="/about/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">El Club</a>
+  <a href="/disciplines/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">Disciplinas</a>
+  <a href="/calendar/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">Calendario</a>
+  <a href="/gallery/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">Galería</a>
+  <a href="/news/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">Noticias</a>
+  <a href="/shop/" class="text-2xl font-bold text-white hover:text-hale-cyan transition-colors transform hover:scale-110">Tienda</a>
+  
+  <a href="/join/" class="mt-8 bg-hale-accent text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-orange-500/30">
+    Inscríbete Ahora
+  </a>
+  
+  <button id="close-menu-btn" aria-label="Cerrar menú" class="absolute top-6 right-6 text-white/50 hover:text-white">
+    <i data-lucide="x" class="w-8 h-8"></i>
+  </button>
+</div>
+
+    
+    <main class="flex-grow">
+      <div class="relative h-[95vh] w-full overflow-hidden">
+  <div class="absolute inset-0 transform scale-105">
+    <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=2070&auto=format&fit=crop" alt="Nadador" class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-gradient-to-b from-hale-dark/40 via-hale-dark/20 to-hale-surface"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-hale-dark/80 via-transparent to-transparent"></div>
+  </div>
+  <div class="relative h-full flex flex-col justify-center px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto pt-20">
+    <div class="space-y-8 max-w-4xl animate-float">
+      <div class="inline-flex items-center space-x-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium tracking-wide shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-hale-accent animate-pulse"></span>
+        <span>Club Deportivo LGTBI+ Inclusivo</span>
+      </div>
+      <h1 class="text-5xl sm:text-7xl md:text-8xl font-extrabold text-white tracking-tight leading-[0.9]">
+        Sumérgete en <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-hale-cyan via-white to-hale-light">tu mejor versión</span>
+      </h1>
+      <p class="text-xl sm:text-2xl text-gray-200 max-w-xl font-light leading-relaxed border-l-4 border-hale-accent pl-6">
+        Entrena, compite y diviértete. Natación, aguas abiertas y saltos en un ambiente diverso y profesional.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <a href="/join/" class="group relative flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-hale-blue overflow-hidden shadow-[0_0_40px_rgba(0,132,183,0.3)] transition-all hover:scale-105">
+          <span>¡Únete al equipo!</span>
+          <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform w-5 h-5"></i>
+        </a>
+        <a href="/about/" class="flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white hover:bg-white/10 transition-all backdrop-blur-sm border border-white/30">
+          Descubre más
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Mucho más que un club de natación</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">En Halegatos combinamos el deporte de competición con un ambiente social inmejorable. Descubre todo lo que tenemos preparado para ti.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group bg-hale-surface p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-all duration-300">
+        <div class="w-14 h-14 bg-hale-light text-hale-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <i data-lucide="users" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">La Familia Halegatos</h3>
+        <p class="text-slate-600 mb-6">Un espacio seguro y diverso donde cada brazada cuenta. Conoce nuestra historia y valores.</p>
+        <a href="/about/" class="inline-flex items-center font-bold text-hale-blue hover:text-hale-dark">
+          Conócenos <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+        </a>
+      </div>
+      <div class="group bg-hale-surface p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-all duration-300">
+        <div class="w-14 h-14 bg-orange-100 text-hale-accent rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <i data-lucide="trophy" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Nuestras Disciplinas</h3>
+        <p class="text-slate-600 mb-6">Desde natación máster hasta saltos de trampolín y aguas abiertas. Tenemos un lugar para ti.</p>
+        <a href="/disciplines/" class="inline-flex items-center font-bold text-hale-accent hover:text-orange-700">
+          Ver entrenamientos <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+        </a>
+      </div>
+      <div class="group bg-hale-surface p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-all duration-300">
+        <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <i data-lucide="calendar" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Calendario y Eventos</h3>
+        <p class="text-slate-600 mb-6">No te pierdas ninguna competición, viaje o evento social. La temporada está llena de acción.</p>
+        <a href="/calendar/" class="inline-flex items-center font-bold text-teal-600 hover:text-teal-800">
+          Próximas fechas <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      
+      <!-- Brand -->
+      <div class="col-span-1 md:col-span-1">
+         <div class="mb-6">
+          <img 
+            src="https://www.halegatos.com/wp-content/uploads/2021/09/Halegatos-club-deportivo-madrid_171.png" 
+            alt="Halegatos Logo" 
+            class="h-12 w-auto brightness-0 invert opacity-90"
+          />
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Club deportivo inclusivo en Madrid. Natación, saltos y aguas abiertas para todos.
+          Fomentando la visibilidad y el deporte desde hace más de 20 años.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="font-bold text-lg mb-6 text-hale-cyan">Explora</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li><a href="/about/" class="hover:text-white transition-colors">Sobre nosotros</a></li>
+          <li><a href="/disciplines/" class="hover:text-white transition-colors">Disciplinas</a></li>
+          <li><a href="/calendar/" class="hover:text-white transition-colors">Calendario</a></li>
+          <li><a href="/join/" class="hover:text-white transition-colors">Inscripciones</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-bold text-lg mb-6 text-hale-cyan">Contacto</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li class="flex items-start">
+            <i data-lucide="map-pin" class="mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+            <span>Entrenamos en varias piscinas de Madrid Centro (M86, Escuelas Pías).</span>
+          </li>
+          <li class="flex items-center">
+            <i data-lucide="mail" class="mr-3 flex-shrink-0 w-5 h-5"></i>
+            <a href="mailto:info@halegatos.com" class="hover:text-white">info@halegatos.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h4 class="font-bold text-lg mb-6 text-hale-cyan">Síguenos</h4>
+        <div class="flex space-x-4">
+          <a href="#" aria-label="Instagram" class="bg-gray-800 p-3 rounded-full hover:bg-hale-accent transition-colors duration-300">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="#" aria-label="Twitter" class="bg-gray-800 p-3 rounded-full hover:bg-hale-blue transition-colors duration-300">
+            <i data-lucide="twitter" class="w-5 h-5"></i>
+          </a>
+          <a href="#" aria-label="Facebook" class="bg-gray-800 p-3 rounded-full hover:bg-blue-700 transition-colors duration-300">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-500 text-sm mb-4 md:mb-0">
+        &copy; <span id="current-year"></span> Club Halegatos. Todos los derechos reservados.
+      </p>
+      <div class="flex space-x-6 text-sm text-gray-500">
+        <a href="/legal/" class="hover:text-white">Aviso Legal</a>
+        <a href="/privacy/" class="hover:text-white">Política de Privacidad</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
